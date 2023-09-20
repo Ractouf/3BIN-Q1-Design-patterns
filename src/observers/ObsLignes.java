@@ -1,9 +1,11 @@
-public class ObsLigne implements Observer {
-    public int result = 0;
+package observers;
+
+public class ObsLignes implements Observer {
+    private int result;
 
     @Override
     public void traiterLigne(String ligne) {
-        result ++;
+        result++;
     }
 
     @Override
