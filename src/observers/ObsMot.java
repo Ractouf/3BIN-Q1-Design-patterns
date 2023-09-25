@@ -15,7 +15,7 @@ public class ObsMot implements Observer {
   }
 
   @Override
-  public int result() {
-    return result;
+  public void result() {
+    System.out.println("Nombre de mot " + target + ": " + result);
   }
 }

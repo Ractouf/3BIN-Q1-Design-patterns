@@ -9,7 +9,7 @@ public class ObsMots implements Observer {
   }
 
   @Override
-  public int result() {
-    return result;
+  public void result() {
+    System.out.println("Nombre de mots: " + result);
   }
 }

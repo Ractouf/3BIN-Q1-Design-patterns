@@ -32,17 +32,6 @@ public class LecteurTexte {
 
         lecteurAvecBuffer.close();
 
-        observerList.forEach(observer -> {
-            String targetValue = null;
-            try {
-                Field target = observer.getClass().getDeclaredField("target");
-                target.setAccessible(true);
-                targetValue = (String) target.get(observer);
-                targetValue = targetValue.toLowerCase();
-            } catch (NoSuchFieldException | IllegalAccessException ignored) {
-            }
-            
-            System.out.println("Nombre de " + observer.getClass().getSimpleName().replace("Obs", "") + " " + (targetValue == null ? "" : targetValue) + " " + observer.result());
-        });
+        observerList.forEach(Observer::result);
     }
 }

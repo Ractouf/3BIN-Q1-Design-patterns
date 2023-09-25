@@ -9,7 +9,7 @@ public class ObsLignes implements Observer {
     }
 
     @Override
-    public int result() {
-        return result;
+    public void result() {
+        System.out.println("Nombre de lignes: " + result);
     }
 }

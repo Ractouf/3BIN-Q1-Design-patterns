@@ -12,8 +12,8 @@ public class ObsPalindromes implements Observer {
   }
 
   @Override
-  public int result() {
-    return result;
+  public void result() {
+    System.out.println("Nombre de palindromes: " + result);
   }
 
   private boolean isPalindrome(String word) {
