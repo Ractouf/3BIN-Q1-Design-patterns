@@ -1,3 +1,5 @@
+package strategies;
+
 public class StartsWithStrategy implements Strategy {
     private char startWith;
 

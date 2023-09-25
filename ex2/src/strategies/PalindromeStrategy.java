@@ -1,3 +1,5 @@
+package strategies;
+
 public class PalindromeStrategy implements Strategy {
     @Override
     public boolean compare(String word) {

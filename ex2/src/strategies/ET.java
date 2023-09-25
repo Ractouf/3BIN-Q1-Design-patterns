@@ -1,11 +1,13 @@
+package strategies;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class OU implements Strategy {
+public class ET implements Strategy {
     List<Strategy> strategies;
 
-    public OU(Strategy... strategies) {
+    public ET(Strategy... strategies) {
         this.strategies = new ArrayList<>();
 
         this.strategies.addAll(Arrays.asList(strategies));
@@ -13,11 +15,8 @@ public class OU implements Strategy {
 
     @Override
     public boolean compare(String word) {
-        boolean or = false;
-
         for (Strategy strategy : strategies)
-            if (strategy.compare(word)) or = true;
-
-        return or;
+            if (!strategy.compare(word)) return false;
+        return true;
     }
 }

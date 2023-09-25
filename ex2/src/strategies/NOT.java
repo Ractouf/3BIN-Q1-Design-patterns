@@ -1,3 +1,5 @@
+package strategies;
+
 public class NOT implements Strategy {
     private final Strategy strategy;
 

@@ -1,3 +1,5 @@
+package strategies;
+
 public class LengthStrategy implements Strategy {
     private int length;
 
