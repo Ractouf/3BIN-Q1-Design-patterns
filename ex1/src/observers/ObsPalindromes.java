@@ -8,7 +8,7 @@ public class ObsPalindromes implements Observer {
     String[] mots = ligne.split(" ");
 
     for (String mot : mots)
-      if (isPalindrome(mot)) result++;
+      if (isPalindrome(mot.toLowerCase())) result++;
   }
 
   @Override
@@ -17,18 +17,8 @@ public class ObsPalindromes implements Observer {
   }
 
   private boolean isPalindrome(String word) {
-    word = word.toLowerCase();
+    StringBuilder temp = new StringBuilder(word);
 
-    int left = 0;
-    int right = word.length() - 1;
-
-    while (left < right) {
-      if (word.charAt(left) != word.charAt(right)) return false;
-
-      left++;
-      right--;
-    }
-
-    return true;
+    return word.equals(temp.reverse().toString());
   }
 }

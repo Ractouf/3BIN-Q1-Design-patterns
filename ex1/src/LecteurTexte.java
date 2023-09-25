@@ -5,7 +5,7 @@ import java.util.Arrays;
 import observers.Observer;
 
 public class LecteurTexte {
-    ArrayList<Observer> observerList;
+    private ArrayList<Observer> observerList;
 
     public LecteurTexte(Observer... observers) {
         observerList = new ArrayList<>();
