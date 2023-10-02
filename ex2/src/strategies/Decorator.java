@@ -3,20 +3,22 @@ package strategies;
 public class Decorator implements Strategy {
 
     private final Strategy strategy;
-    private int compteur;
+    private int counter;
 
     public Decorator(Strategy strategy) {
         this.strategy = strategy;
+        counter = 0;
     }
 
-    public int getCompteur() {
-        return compteur;
+    public int getCounter() {
+        return counter;
     }
 
     @Override
     public boolean compare(String word) {
-        if (strategy.compare(word)) compteur++;
+        boolean isValid = strategy.compare(word);
+        if (isValid) counter++;
 
-        return true;
+        return isValid;
     }
 }

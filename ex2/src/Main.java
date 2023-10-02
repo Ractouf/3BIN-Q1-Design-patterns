@@ -8,7 +8,9 @@ public class Main {
 
         try {
             System.out.println("starts with 't'");
-            listerMots.imprimerStrategy(new StartsWithStrategy('t'));
+            Decorator d = new Decorator(new StartsWithStrategy('t'));
+            listerMots.imprimerStrategy(d);
+            System.out.println(d.getCounter());
             System.out.println("Length");
             listerMots.imprimerStrategy(new LengthStrategy(4));
             System.out.println("Palindrome");
