@@ -20,5 +20,14 @@ public class Livre implements Article {
 	public void setPrix(int prix){
 		this.prix=prix;
 	}
-	
+
+	@Override
+	public void ajouter(String name, int anneeDeParution) {
+
+	}
+
+	@Override
+	public Article retourneDVD(String name) {
+		return null;
+	}
 }

@@ -13,8 +13,6 @@ public abstract class DrawCar {
 			double center= i / 50 * carLength;
 			Shape c = this.createShape(1, new Point(carHeight, center));
 		}
-
-
 	}
 
 	protected abstract Shape createShape(double i, Point point);
