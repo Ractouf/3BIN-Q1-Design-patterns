@@ -19,6 +19,46 @@ public class Album {
         this.debitAbonne = builder.debitAbonne;
     }
 
+    public String getTitre() {
+        return titre;
+    }
+    public String getNomArtiste() {
+        return nomArtiste;
+    }
+    public String getPaysArtiste() {
+        return paysArtiste;
+    }
+    public String getLabel() {
+        return label;
+    }
+    public String getMarqueDisque() {
+        return marqueDisque;
+    }
+    public String getProducteur() {
+        return producteur;
+    }
+    public String getVersion() {
+        return version;
+    }
+    public String getGenre() {
+        return genre;
+    }
+    public int getAnneeParution() {
+        return anneeParution;
+    }
+    public int getAnneeParutionOriginal() {
+        return anneeParutionOriginal;
+    }
+    public int getDebitStandard() {
+        return debitStandard;
+    }
+    public int getDebitAbonne() {
+        return debitAbonne;
+    }
+    public boolean isAlbumRemasterise() {
+        return albumRemasterise;
+    }
+
     public static class Builder {
         private final String titre, nomArtiste;
         private String paysArtiste, label, marqueDisque, producteur, version, genre;
