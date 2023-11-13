@@ -32,7 +32,14 @@ public class PatternRobots {
 		// un robot avec un canon de 9, un bouclier de 3, une fréquence de tir de 90
 		// et qui a reçu une amélioration de bouclier multipliant ce dernier par 2 et une amélioration de mitigation des dégats qui réduit les points de vue perdus par 2.
 		Robot robot2 = new RobotImpl.Builder().canon(9).schield(3).freq(90).build();
-		
+
+		FlyweightFactoryAvecAbstractFactory flyweightFactoryAvecAbstractFactory = new FlyweightFactoryAvecAbstractFactory();
+
+		flyweightFactoryAvecAbstractFactory.put("tank", new FactoryTank());
+		Robot tank = flyweightFactoryAvecAbstractFactory.create("tank");
+
+		System.out.println(tank.getCanon());
+
 		fight(robot1, robot2);
 	}
 }

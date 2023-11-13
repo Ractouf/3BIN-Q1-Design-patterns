@@ -1,5 +1,6 @@
 public class RobotImpl implements Robot {
-    private final int canon, schield, freq, life;
+    private final int canon, schield, freq;
+    private int life;
     private final String name;
 
     public RobotImpl(Builder builder) {
@@ -28,7 +29,8 @@ public class RobotImpl implements Robot {
     }
     @Override
     public int diffLife(int i) {
-        return life + i;
+        life = life + i;
+        return life;
     }
 
     public static class Builder {
