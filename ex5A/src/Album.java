@@ -3,7 +3,7 @@ public class Album {
     private final int anneeParution, anneeParutionOriginal, debitStandard, debitAbonne;
     private final boolean albumRemasterise;
 
-    public Album(Builder builder) {
+    private Album(Builder builder) {
         this.titre = builder.titre;
         this.nomArtiste = builder.nomArtiste;
         this.paysArtiste = builder.paysArtiste;

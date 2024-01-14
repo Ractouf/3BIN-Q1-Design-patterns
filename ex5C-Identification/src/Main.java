@@ -5,8 +5,10 @@ public class Main {
 	public static void main(String[] args) throws IOException {
 		Lecteur lecteur = new Lecteur("question.txt");
 		Partie partie = lecteur.construire();
+
 		Listeur listeur = new Listeur();
 		Totaliseur total = new Totaliseur();
+
 		partie.demande(listeur);
 		System.out.println();
 		System.out.println();
